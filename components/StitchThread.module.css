@@ -1,0 +1,28 @@
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 40;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.svg {
+  display: block;
+}
+
+.dash {
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-dasharray: 7 6;
+  stroke-linecap: round;
+  opacity: 0.85;
+}
+
+/* the thread is a desktop privilege — never on mobile */
+@media (max-width: 860px) {
+  .wrap {
+    display: none;
+  }
+}

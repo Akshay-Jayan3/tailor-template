@@ -1,0 +1,157 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 18px 40px;
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--text-light);
+}
+
+.nav {
+  display: none;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(243, 233, 236, 0.8);
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navLink[data-active='true'] {
+  color: var(--text-light);
+}
+
+.navLink[data-active='true']::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 1px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.phone {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-dark);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
+.whatsapp {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ---- MOBILE MENU TOGGLE -------------------------------------------- */
+
+.menuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-light);
+}
+
+.mobileNav {
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-dark);
+  margin-top: 12px;
+}
+
+.mobileNavLink {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(243, 233, 236, 0.8);
+  padding: 12px 4px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.mobileNavLink[data-active='true'] {
+  color: var(--gold-lt);
+}
+
+.mobileWhatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ---- DESKTOP --------------------------------------------------- */
+
+@media (min-width: 900px) {
+  .nav {
+    display: flex;
+  }
+  .phone {
+    display: flex;
+  }
+  .whatsapp {
+    display: flex;
+  }
+  .menuBtn {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 14px 20px;
+  }
+}
