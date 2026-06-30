@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { gallerySection, portfolioPieces as PIECES } from '@/lib/site'
+import { gallerySection } from '@/lib/site'
 import styles from './Gallery.module.css'
 
-export default function Gallery() {
+export type GalleryPiece = { name: string; desc: string; src: string }
+
+export default function Gallery({ items }: { items: GalleryPiece[] }) {
   const [open, setOpen] = useState<number | null>(null)
 
   useEffect(() => {
@@ -35,9 +37,9 @@ export default function Gallery() {
         </header>
 
         <div className={styles.grid}>
-          {PIECES.map((piece, i) => (
+          {items.map((piece, i) => (
             <button
-              key={piece.n}
+              key={`${piece.name}-${i}`}
               type="button"
               data-piece
               className={styles.piece}
@@ -46,7 +48,7 @@ export default function Gallery() {
             >
               <span className={styles.frame}>
                 <Image
-                  src={`/images/works/${piece.image}`}
+                  src={piece.src}
                   alt={`${piece.name} — finished piece`}
                   fill
                   sizes="(max-width: 720px) 50vw, 16vw"
@@ -67,21 +69,21 @@ export default function Gallery() {
           className={styles.lightbox}
           role="dialog"
           aria-modal="true"
-          aria-label={PIECES[open].name}
+          aria-label={items[open].name}
           onClick={() => setOpen(null)}
         >
           <div className={styles.lightboxInner} onClick={(e) => e.stopPropagation()}>
             <div className={styles.frame}>
               <Image
-                src={`/images/works/${PIECES[open].image}`}
-                alt={`${PIECES[open].name} — full view`}
+                src={items[open].src}
+                alt={`${items[open].name} — full view`}
                 fill
                 sizes="(max-width: 720px) 100vw, 440px"
                 style={{ objectFit: 'cover' }}
               />
             </div>
             <p className={styles.lightboxCaption}>
-              {PIECES[open].name} · {PIECES[open].desc}
+              {items[open].name} · {items[open].desc}
             </p>
           </div>
           <button type="button" className={styles.close} onClick={() => setOpen(null)} aria-label="Close">

@@ -1,5 +1,6 @@
-import { Scissors, Shirt, Sparkles, Baby, Ruler, Moon } from 'lucide-react'
-import { services, servicesSection } from '@/lib/site'
+import { Scissors, Shirt, Sparkles, Baby, Ruler, Moon, Pencil } from 'lucide-react'
+import { services as fallbackServices, servicesSection } from '@/lib/site'
+import { supabase } from '@/lib/supabase'
 import styles from './Services.module.css'
 
 const ICONS: Record<string, React.ReactNode> = {
@@ -9,9 +10,45 @@ const ICONS: Record<string, React.ReactNode> = {
   star: <Baby size={20} strokeWidth={1.6} />,
   ruler: <Ruler size={20} strokeWidth={1.6} />,
   moon: <Moon size={20} strokeWidth={1.6} />,
+  pencil: <Pencil size={20} strokeWidth={1.6} />,
 }
 
-export default function Services() {
+const NAME_TO_ICON: { match: RegExp; icon: string }[] = [
+  { match: /blouse/i, icon: 'scissors' },
+  { match: /churidar|suit/i, icon: 'shirt' },
+  { match: /saree/i, icon: 'sparkle' },
+  { match: /night|frock/i, icon: 'moon' },
+  { match: /kid/i, icon: 'star' },
+  { match: /alter/i, icon: 'ruler' },
+]
+
+function iconFor(name: string) {
+  return NAME_TO_ICON.find((n) => n.match.test(name))?.icon ?? 'pencil'
+}
+
+type DisplayService = { name: string; desc: string; icon: string }
+
+async function getServices(): Promise<DisplayService[]> {
+  if (!supabase) return fallbackServices
+
+  const { data, error } = await supabase
+    .from('services')
+    .select('name, description, price_range')
+    .eq('visible', true)
+    .order('display_order')
+
+  if (error || !data || data.length === 0) return fallbackServices
+
+  return data.map((s) => ({
+    name: s.name,
+    desc: s.description ?? s.price_range ?? '',
+    icon: iconFor(s.name),
+  }))
+}
+
+export default async function Services() {
+  const services = await getServices()
+
   return (
     <section className={styles.services} id="services">
       <div className={styles.container}>
