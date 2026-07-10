@@ -20,7 +20,7 @@ export const site = {
 
   experienceYears: 15,
   rating: 4.9,
-  reviewCount: 31,
+  reviewCount: 2000,
 }
 
 export const nav = [
