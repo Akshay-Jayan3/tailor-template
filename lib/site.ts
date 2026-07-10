@@ -5,99 +5,98 @@
    replaced once the real details are available. */
 
 export const site = {
-  name: 'Seww Fashions',
-  tagline: 'By Amma',
-  role: 'Tailor',
-  area: 'Kochi, Kerala', // PLACEHOLDER — exact area pending
-  hours: 'Mon–Sat · 9:30am – 6pm', // PLACEHOLDER
-  walkIns: 'By appointment · Walk-ins welcome',
+  name: 'SEWW',
+  role: 'Custom Clothing Studio',
+  area: 'Kochi, Kerala',
+  hours: 'Mon–Sat · 9:30am – 6pm',
+  walkIns: 'Appointments & Walk-ins Welcome',
 
-  /* wa.me requires country code + digits only, no spaces */
-  whatsappNumber: '910000000000', // PLACEHOLDER
-  phoneDisplay: '+91 00000 00000', // PLACEHOLDER
-  whatsappMessage: 'Hello! I found your website and would like to ask about stitching.',
+  whatsappNumber: '919605076089',
+  phoneDisplay: '+91 96050 76089',
+  whatsappMessage:
+    'Hi SEWW! I would like to stitch a custom outfit.',
 
-  /* PLACEHOLDER — set the real production domain once deployed.
-     Everything that needs an absolute URL (metadataBase, sitemap,
-     robots, JSON-LD) reads from this one place. */
-  url: 'https://sewwfashions.com',
+  url: 'https://seww.in',
 
-  experienceYears: 10,
+  experienceYears: 15,
   rating: 4.9,
-  reviewCount: 128,
+  reviewCount: 31,
 }
 
 export const nav = [
   { href: '#home', label: 'Home' },
   { href: '#services', label: 'Services' },
   { href: '#work', label: 'Gallery' },
-  { href: '#about', label: 'About Us' },
-  { href: '#contact', label: 'Contact Us' },
 ]
 
 export const hero = {
-  badge: 'Trusted by 2,000+ Happy Customers in Kochi ✦',
-  headlineLine1: 'Tailoring That Fits',
-  headlineAccent: 'You',
-  headlineEnd: ', Perfectly.',
+  badge: '✨ Custom Tailored • Curated Fabrics • Perfect Fit',
+
+  headlineLine1: 'Custom Clothing',
+
+  headlineAccent: 'Made',
+
+  headlineEnd: 'Just for You.',
+
   subline:
-    'From everyday blouses and churidars to bridal saree blouses and alterations — every piece is hand-finished to your exact measurements. Send your measurements on WhatsApp and hear back in minutes.',
-  imageAlt: 'Bridal lehenga and blouse on a mannequin, measuring tape draped across',
-  primaryCta: 'Get a Free Fitting Quote →',
-  primaryCtaMessage: 'Hello! I would like to get a fitting quote for stitching.',
-  secondaryCta: 'View Our Work',
+    'Choose from our curated fabric collection or bring your own. From elegant blouses and churidars to frocks and nightwear, every outfit is tailored to your measurements with exceptional craftsmanship.',
+
+  imageAlt:
+    'Elegant custom tailored women’s clothing',
+
+  primaryCta: 'Book Your Consultation →',
+
+  primaryCtaMessage:
+    'Hi SEWW! I would like to book a consultation for custom stitching.',
+
+  secondaryCta: 'Explore Our Collection',
 }
 
 export const stats = [
-  { value: `${site.experienceYears}+`, label: 'Years Experience' },
-  { value: '2K+', label: 'Happy Customers' },
-  { value: '1.2K+', label: 'Outfits Delivered' },
-  { value: '98%', label: 'Repeat Customers' },
+  { value: '15+', label: 'Years of Craftsmanship' },
+  { value: '2K+', label: 'Happy Clients' },
+  { value: '5K+', label: 'Custom Pieces Created' },
+  { value: '98%', label: 'Returning Customers' },
 ]
 
 export const servicesSection = {
-  label: 'What we stitch',
-  heading: 'Our Services',
-  cta: 'View All Services →',
+  label: 'Crafted for Every Occasion',
+  heading: 'Custom Clothing Services',
+  cta: 'Explore Services →',
 }
 
 export const services = [
   {
-    name: 'Blouse Stitching',
-    desc: 'Designer, bridal, casual, padded & more.',
-    icon: 'scissors',
-  },
-  {
-    name: 'Churidar',
-    desc: 'Salwar sets stitched to your fit, lining included.',
-    icon: 'shirt',
-  },
-  {
-    name: 'Saree Blouse',
-    desc: 'Plain to bridal — lined, fitted, finished by hand.',
+    name: 'Designer Blouses',
+    desc: 'Bridal, party wear, casual and custom-designed blouses.',
     icon: 'sparkle',
   },
   {
-    name: 'Night Frock',
-    desc: 'Soft, comfortable nightwear stitched to size.',
+    name: 'Churidars & Kurtis',
+    desc: 'Tailored with curated fabrics and a flawless fit.',
+    icon: 'shirt',
+  },
+  {
+    name: 'Frocks',
+    desc: 'Elegant custom frocks for every occasion.',
+    icon: 'star',
+  },
+  {
+    name: 'Nightwear',
+    desc: 'Comfortable, breathable nighties and loungewear.',
     icon: 'moon',
   },
   {
-    name: 'Alteration',
-    desc: 'Saree, blouse, dress, pant resizing & repairs.',
+    name: 'Alterations',
+    desc: 'Precision alterations for the perfect fit.',
     icon: 'ruler',
-  },
-  {
-    name: 'Kids Wear',
-    desc: 'Frocks and outfits for kids, room to grow.',
-    icon: 'star',
-  },
+  }
 ]
 
 export const gallerySection = {
-  label: 'Our work speaks',
-  heading: 'Recent Creations',
-  viewAllCta: 'View Full Portfolio →',
+  label: 'Crafted With Care',
+  heading: 'Our Signature Creations',
+  viewAllCta: 'View Full Gallery →',
 }
 
 export const portfolioPieces = [
@@ -108,24 +107,26 @@ export const portfolioPieces = [
 ] as const
 
 export const about = {
-  label: 'About us',
-  heading: 'Every Stitch Tells a Story',
+  label: 'Our Story',
+
+  heading: 'Crafting Confidence, One Stitch at a Time',
+
   copy:
-    "We believe tailoring is more than stitching — it's about understanding you, your style, and creating something that feels uniquely yours.",
+    'At SEWW, we believe every woman deserves clothing that feels as beautiful as it looks. We combine carefully curated fabrics with expert tailoring to create garments that reflect your personality, fit perfectly, and are made to last.',
+
   points: [
-    'Personalized attention',
-    'Finest quality fabrics',
-    'Neat finishing & perfect fit',
-    'Timely delivery',
+    'Made-to-measure tailoring',
+    'Curated premium fabrics',
+    'Attention to every detail',
+    'Beautiful finishing',
   ],
-  cta: 'Know More About Us →',
-  workshopImageAlt: 'Inside the workshop',
-  storefrontImageAlt: 'storefront',
+
+  cta: 'Discover SEWW →',
 }
 
 export const reviewsSection = {
-  label: 'What customers say',
-  heading: 'Loved by Our Customers',
+  label: 'Loved by Women Across Kochi',
+  heading: 'Real Stories. Beautiful Fits.',
 }
 
 /* PLACEHOLDER reviews — swap for real customer words once available.
@@ -147,18 +148,34 @@ export const testimonials = [
 ]
 
 export const contactSection = {
-  eyebrow: 'Have a design in mind?',
-  heading: "Let's bring it to life!",
-  whatsappCta: 'Chat on WhatsApp',
-  visitCta: 'Visit Our Studio',
-  floatCta: 'Chat with us',
+  eyebrow: 'Ready for your perfect fit?',
+  heading: "Let's Create Something Beautiful Together",
+  whatsappCta: 'Book on WhatsApp',
+  visitCta: 'Visit SEWW',
+  floatCta: 'Book Now',
 }
 
 export const trustPoints = [
-  { icon: 'fit', label: 'Perfect Fit', sub: 'Made for you' },
-  { icon: 'quality', label: 'Premium Quality', sub: 'Finest fabrics' },
-  { icon: 'time', label: 'On-time Delivery', sub: 'Always on time' },
-  { icon: 'heart', label: 'Happy Customers', sub: 'Trusted by many' },
+  {
+    icon: 'fit',
+    label: 'Made to Measure',
+    sub: 'Tailored for you',
+  },
+  {
+    icon: 'quality',
+    label: 'Curated Fabrics',
+    sub: 'Premium quality',
+  },
+  {
+    icon: 'heart',
+    label: 'Handcrafted',
+    sub: 'Every stitch matters',
+  },
+  {
+    icon: 'time',
+    label: 'On-Time Delivery',
+    sub: 'Always dependable',
+  },
 ]
 
 export const footerPoints = [

@@ -29,10 +29,11 @@ const dmMono = DM_Mono({
   preload: false,
 })
 
-const title = 'Seww Fashions — Custom Tailoring & Bridal Blouse Stitching in Kochi'
-const description =
-  'Custom tailoring in Kochi, Kerala. Blouses, churidars, saree blouses, night frocks, kids wear and alterations stitched to your exact measurements. 2,000+ happy customers, 4.9★ rated. Message us on WhatsApp for a free fitting quote.'
+const title =
+  'SEWW – Custom Clothing Studio | Bespoke Women’s Wear in Kochi'
 
+const description =
+  'SEWW is a premium custom clothing studio in Kochi, Kerala, specializing in bespoke women’s wear. From designer blouses and churidars to frocks, nightwear, and alterations, every piece is crafted with curated fabrics and tailored to your unique measurements.'
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -41,15 +42,21 @@ export const metadata: Metadata = {
   },
   description,
   keywords: [
-    'tailor in Kochi',
-    'custom tailoring Kerala',
-    'blouse stitching Kochi',
-    'bridal blouse tailor',
-    'churidar stitching',
-    'saree blouse tailor Kochi',
-    'kids wear tailor',
-    'alterations Kochi',
-    'Seww Fashions',
+    'custom clothing studio Kochi',
+    'women boutique Kochi',
+    'designer blouse stitching Kochi',
+    'custom blouse Kerala',
+    'bespoke clothing Kochi',
+    'made to measure clothing Kerala',
+    'churidar stitching Kochi',
+    'custom frocks Kochi',
+    'nightwear stitching Kerala',
+    'bridal blouse designer Kochi',
+    'women tailoring Kochi',
+    'alteration services Kochi',
+    'curated fabrics Kochi',
+    'SEWW',
+    'seww.in',
   ],
   authors: [{ name: site.name }],
   alternates: {
@@ -57,10 +64,18 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title,
-    description: 'Custom tailoring made beautiful. Every piece stitched to your exact measurements.',
+    description:
+      'Premium custom clothing crafted for women. Curated fabrics, made-to-measure tailoring, and timeless craftsmanship by SEWW.',
     url: site.url,
     siteName: site.name,
-    images: [{ url: '/images/hero.png', width: 1717, height: 916, alt: title }],
+    images: [
+      {
+        url: '/images/hero.png',
+        width: 1717,
+        height: 916,
+        alt: 'SEWW Custom Clothing Studio',
+      },
+    ],
     locale: 'en_IN',
     type: 'website',
   },

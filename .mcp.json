@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "dskit": {
-      "command": "node",
-      "args": ["D:/componentmcp/dist/index.js", "--mcp", "--url", "https://react.carbondesignsystem.com"]
-    }
-  }
-}

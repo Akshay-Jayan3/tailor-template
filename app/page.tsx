@@ -1,5 +1,6 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import About from '@/components/About'
 import Services from '@/components/Services'
 import Gallery, { type GalleryPiece } from '@/components/Gallery'
 import Craft from '@/components/Craft'
@@ -50,6 +51,7 @@ export default async function Home() {
     <main>
       <Header />
       <Hero />
+      <About />
       <Services />
       <Gallery items={galleryItems} />
       <Craft />

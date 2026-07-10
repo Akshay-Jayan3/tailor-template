@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { nav as LINKS, site, whatsappLink } from '@/lib/site'
 import styles from './Header.module.css'
@@ -17,6 +18,13 @@ export default function Header() {
   return (
     <header className={styles.header} id="home">
       <a className={styles.brand} href="#home" onClick={() => go('#home')}>
+        <Image
+          src="/logo.png"
+          alt={site.name}
+          width={40}
+          height={40}
+          priority
+        />
         <span className={styles.brandName}>{site.name}</span>
       </a>
 
@@ -35,9 +43,6 @@ export default function Header() {
       </nav>
 
       <div className={styles.actions}>
-        <a className={styles.phone} href={`tel:${site.whatsappNumber}`}>
-          {site.phoneDisplay}
-        </a>
         <a
           className={`${styles.whatsapp} btn-primary`}
           href={whatsappLink(site.whatsappMessage)}

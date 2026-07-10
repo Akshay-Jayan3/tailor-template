@@ -10,7 +10,7 @@ export default function Craft() {
           <div className={styles.videoFrame}>
             <Image
               src="/images/process/stitch.png"
-              alt={about.workshopImageAlt}
+              alt="Tailor workshop stitching"
               fill
               sizes="(max-width: 900px) 60vw, 30vw"
               style={{ objectFit: 'cover' }}
@@ -19,7 +19,7 @@ export default function Craft() {
           <div className={styles.storeFrame}>
             <Image
               src="/images/process/fabric.png"
-              alt={`${site.name} ${about.storefrontImageAlt}`}
+              alt="Tailor storefront fabric"
               fill
               sizes="(max-width: 900px) 40vw, 20vw"
               style={{ objectFit: 'cover' }}
