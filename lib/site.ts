@@ -19,8 +19,6 @@ export const site = {
   url: 'https://seww.in',
 
   experienceYears: 15,
-  rating: 4.9,
-  reviewCount: 2000,
 }
 
 export const nav = [
