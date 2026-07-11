@@ -108,12 +108,7 @@ const jsonLd = {
     addressLocality: 'Kochi',
     addressRegion: 'Kerala',
     addressCountry: 'IN',
-  },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: site.rating,
-    reviewCount: site.reviewCount,
-  },
+  }
 }
 
 export default function RootLayout({

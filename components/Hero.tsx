@@ -101,11 +101,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <div className={styles.ratingChip}>
-        <Star size={13} strokeWidth={1.6} fill="currentColor" /> {site.rating} · {site.reviewCount}+
-        Google Reviews
-      </div>
     </section>
   )
 }

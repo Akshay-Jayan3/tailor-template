@@ -29,13 +29,6 @@ export default async function Conviction() {
         <header className={styles.intro} data-reveal>
           <span className={styles.label}>{reviewsSection.label}</span>
           <h2 className={styles.heading}>{reviewsSection.heading}</h2>
-          <div className={styles.ratingRow}>
-            <span className={styles.ratingScore}>{site.rating}</span>
-            <span className={styles.stars} aria-hidden="true">
-              ★★★★★
-            </span>
-            <span className={styles.ratingCount}>{site.reviewCount}+ Google Reviews</span>
-          </div>
         </header>
 
         <div className={styles.grid}>
