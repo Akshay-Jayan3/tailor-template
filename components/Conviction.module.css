@@ -107,3 +107,62 @@
     padding: 0 20px;
   }
 }
+
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-top: auto;
+  padding-top: 24px;
+}
+
+.cite {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.source {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-ghost);
+}
+
+.reviewsCta {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 36px;
+}
+
+.googleLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid var(--gold);
+
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: var(--gold-lt);
+
+  transition:
+    gap var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.googleLink:hover {
+  gap: 17px;
+  color: var(--text);
+}

@@ -39,10 +39,6 @@ export default function Craft() {
               </li>
             ))}
           </ul>
-
-          <a className={styles.cta} href="#about">
-            {about.cta}
-          </a>
         </div>
       </div>
     </section>

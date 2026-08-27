@@ -1,120 +1,165 @@
-import type { Metadata } from 'next'
-import { Cormorant_Garamond, Instrument_Sans, DM_Mono } from 'next/font/google'
-import { site } from '@/lib/site'
-import './globals.css'
+import type { Metadata } from "next";
+import {
+  Cormorant_Garamond,
+  Instrument_Sans,
+  DM_Mono,
+} from "next/font/google";
+import { site } from "@/lib/site";
+import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
-  variable: '--font-cormorant',
-  subsets: ['latin'],
-  weight: ['300', '400', '600'],
-  style: ['normal', 'italic'],
-  display: 'swap',
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+  style: ["normal", "italic"],
+  display: "swap",
   preload: true,
-})
+});
 
 const instrumentSans = Instrument_Sans({
-  variable: '--font-instrument',
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  display: 'swap',
+  variable: "--font-instrument",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
   preload: true,
-})
+});
 
 const dmMono = DM_Mono({
-  variable: '--font-dm-mono',
-  subsets: ['latin'],
-  weight: ['400', '500'],
-  style: ['normal', 'italic'],
-  display: 'swap',
+  variable: "--font-dm-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  style: ["normal", "italic"],
+  display: "swap",
   preload: false,
-})
+});
 
 const title =
-  'SEWW – Custom Clothing Studio | Bespoke Women’s Wear in Kochi'
+  "Sreejas Ladies Tailoring | Custom Tailoring in Kochi";
 
 const description =
-  'SEWW is a premium custom clothing studio in Kochi, Kerala, specializing in bespoke women’s wear. From designer blouses and churidars to frocks, nightwear, and alterations, every piece is crafted with curated fabrics and tailored to your unique measurements.'
+  "Sreejas Ladies Tailoring offers custom ladies tailoring in Kochi, Kerala. Made-to-measure blouses, churidars, kurtis, frocks, nightwear and alterations, tailored with care to your measurements and style.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
+
   title: {
     default: title,
     template: `%s — ${site.name}`,
   },
+
   description,
+
   keywords: [
-    'custom clothing studio Kochi',
-    'women boutique Kochi',
-    'designer blouse stitching Kochi',
-    'custom blouse Kerala',
-    'bespoke clothing Kochi',
-    'made to measure clothing Kerala',
-    'churidar stitching Kochi',
-    'custom frocks Kochi',
-    'nightwear stitching Kerala',
-    'bridal blouse designer Kochi',
-    'women tailoring Kochi',
-    'alteration services Kochi',
-    'curated fabrics Kochi',
-    'SEWW',
-    'seww.in',
+    "Sreejas Ladies Tailoring",
+    "ladies tailoring Kochi",
+    "women tailoring Kochi",
+    "tailoring shop Kochi",
+    "custom tailoring Kochi",
+    "blouse stitching Kochi",
+    "blouse tailoring Kochi",
+    "churidar stitching Kochi",
+    "kurti stitching Kochi",
+    "frock stitching Kochi",
+    "nightwear stitching Kochi",
+    "clothing alterations Kochi",
+    "custom clothes Kochi",
+    "ladies tailor Kerala",
   ],
-  authors: [{ name: site.name }],
+
+  authors: [
+    {
+      name: site.name,
+    },
+  ],
+
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
+
   openGraph: {
     title,
-    description:
-      'Premium custom clothing crafted for women. Curated fabrics, made-to-measure tailoring, and timeless craftsmanship by SEWW.',
+    description,
     url: site.url,
     siteName: site.name,
+
     images: [
       {
-        url: '/images/hero.png',
+        url: "/images/hero.png",
         width: 1717,
         height: 916,
-        alt: 'SEWW Custom Clothing Studio',
+        alt: "Sreejas Ladies Tailoring — Custom Tailoring in Kochi",
       },
     ],
-    locale: 'en_IN',
-    type: 'website',
+
+    locale: "en_IN",
+    type: "website",
   },
+
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title,
-    description: 'Custom tailoring made beautiful. Every piece stitched to your exact measurements.',
-    images: ['/images/hero.png'],
+    description,
+    images: ["/images/hero.png"],
   },
+
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
     },
   },
-}
+};
+
+/* ============================================================
+   LocalBusiness structured data
+
+   Keep this aligned with the actual Google Business Profile.
+   Add the exact street address once you have it.
+   ============================================================ */
 
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+
   name: site.name,
+
+  description,
+
   image: `${site.url}/images/hero.png`,
+
   url: site.url,
+
   telephone: `+${site.whatsappNumber}`,
-  priceRange: '₹₹',
+
+  priceRange: "₹₹",
+
   address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Kochi',
-    addressRegion: 'Kerala',
-    addressCountry: 'IN',
-  }
-}
+    "@type": "PostalAddress",
+    addressLocality: "Kochi",
+    addressRegion: "Kerala",
+    postalCode: undefined,
+    addressCountry: "IN",
+  },
+
+  areaServed: {
+    "@type": "City",
+    name: "Kochi",
+  },
+
+  openingHours: [
+    "Mo-Sa 09:30-18:00",
+  ],
+
+  sameAs: [],
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html
@@ -124,10 +169,13 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
         />
       </head>
+
       <body>{children}</body>
     </html>
-  )
+  );
 }

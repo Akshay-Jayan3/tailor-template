@@ -1,144 +1,530 @@
 .contact {
   position: relative;
+  width: 100%;
 }
 
-/* ---- CTA BAR -------------------------------------------------- */
+/* ============================================================
+   CONTACT + LOCATION
+   ============================================================ */
 
-.ctaBar {
+.contactGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  min-height: 560px;
+
+  overflow: hidden;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  background: var(--bg-2);
+}
+
+/* ============================================================
+   LEFT — CONTACT PANEL
+   ============================================================ */
+
+.contactPanel {
   position: relative;
-  background: linear-gradient(135deg, var(--bg-dark-2) 0%, var(--bg) 100%);
-  border-top: 1px solid var(--glass-border);
-  border-bottom: 1px solid var(--glass-border);
-  padding: 36px 40px;
+
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  align-items: flex-start;
   justify-content: space-between;
+
+  gap: 56px;
+
+  padding: 56px 48px;
+
   overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(109, 27, 58, 0.35),
+      transparent 52%
+    ),
+    linear-gradient(
+      145deg,
+      var(--bg-dark-2) 0%,
+      var(--bg-dark) 100%
+    );
 }
 
-.ctaBar::before {
+.contactPanel::before {
   content: '';
+
   position: absolute;
-  top: -120px;
-  right: -80px;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+
+  top: -140px;
+  right: -120px;
+
+  width: 360px;
+  height: 360px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    var(--gold-glow) 0%,
+    transparent 68%
+  );
+
   pointer-events: none;
 }
 
-.ctaText {
-  color: var(--text-light);
+.contactIntro,
+.locationDetails {
+  position: relative;
+  z-index: 1;
 }
 
-.ctaEyebrow {
-  font-family: var(--font-body);
-  font-size: 13px;
-  color: rgba(243, 233, 236, 0.75);
+/* ============================================================
+   CONTACT INTRO
+   ============================================================ */
+
+.ctaEyebrow,
+.locationEyebrow {
+  margin: 0 0 14px;
+
+  font-family: var(--font-mono);
+
+  font-size: 10px;
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--gold-lt);
 }
 
 .ctaHeading {
+  max-width: 580px;
+
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(22px, 2.6vw, 28px);
-  margin-top: 4px;
+
+  font-weight: 400;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.025em;
+
+  color: var(--text);
 }
 
-.ctaActions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+.ctaDescription {
+  max-width: 560px;
+
+  margin-top: 20px;
+
+  font-family: var(--font-body);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color: var(--text-sub);
 }
+
+/* ============================================================
+   WHATSAPP CTA
+   ============================================================ */
 
 .ctaBtn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 13px 20px;
-  border-radius: 12px;
-  border: 1px solid rgba(243, 233, 236, 0.3);
-  color: var(--text-light);
+  justify-content: space-between;
+
+  gap: 24px;
+
+  width: fit-content;
+
+  margin-top: 28px;
+
+  padding: 13px 18px;
+
+  border-radius: 10px;
+
   font-family: var(--font-body);
+
   font-size: 13px;
+
   font-weight: 600;
+
+  color: var(--text);
+
   white-space: nowrap;
+
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out);
 }
 
+.ctaBtn:hover {
+  transform: translateY(-1px);
+}
 
-/* ---- FOOTER TRUST ROW -------------------------------------------- */
+/* ============================================================
+   LOCATION
+   ============================================================ */
+
+.locationDetails {
+  padding-top: 28px;
+
+  border-top: 1px solid var(--border);
+}
+
+.locationTitle {
+  margin: 0 0 24px;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(28px, 3vw, 38px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.015em;
+
+  color: var(--text);
+}
+
+.detailsList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.detail {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.detailIcon {
+  display: flex;
+
+  width: 20px;
+  height: 20px;
+
+  flex: 0 0 20px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 1px;
+
+  color: var(--gold);
+
+  font-family: var(--font-mono);
+
+  font-size: 13px;
+}
+
+.detail > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.detailLabel {
+  font-family: var(--font-mono);
+
+  font-size: 9px;
+
+  line-height: 1;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color: var(--text-ghost);
+}
+
+.detailValue {
+  font-family: var(--font-body);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  color: var(--text-sub);
+}
+
+/* ============================================================
+   DIRECTIONS
+   ============================================================ */
+
+.mapLink {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 14px;
+
+  width: fit-content;
+
+  margin-top: 25px;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid var(--gold);
+
+  font-family: var(--font-mono);
+
+  font-size: 10px;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  color: var(--gold-lt);
+
+  transition:
+    gap var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+
+.mapLink:hover {
+  gap: 19px;
+
+  color: var(--text);
+}
+
+/* ============================================================
+   RIGHT — MAP
+   ============================================================ */
+
+.mapPanel {
+  position: relative;
+
+  min-height: 560px;
+
+  overflow: hidden;
+
+  background: #e9e7e3;
+}
+
+.mapPanel::after {
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  box-shadow:
+    inset 1px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+.mapPanel iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+/* ============================================================
+   FOOTER TRUST ROW
+   ============================================================ */
 
 .footer {
-  background: var(--bg);
-  padding: 28px 40px;
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+
+  gap: 0;
+
+  background: var(--bg);
+
+  border-bottom: 1px solid var(--border);
 }
 
 .footPoint {
-  text-align: left;
+  min-height: 82px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 20px 28px;
+
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.footPoint:nth-child(2n) {
+  border-right: 0;
+}
+
+.footPoint:nth-last-child(-n + 2) {
+  border-bottom: 0;
 }
 
 .footLabel {
   font-family: var(--font-body);
+
   font-size: 13px;
+
   font-weight: 600;
+
   color: var(--text);
 }
 
 .footSub {
+  margin-top: 4px;
+
   font-family: var(--font-body);
+
   font-size: 11px;
+
   color: var(--text-ghost);
-  margin-top: 2px;
 }
 
-/* ---- FLOATING WHATSAPP ------------------------------------------- */
+/* ============================================================
+   FLOATING WHATSAPP
+   ============================================================ */
 
 .float {
   position: fixed;
-  bottom: 22px;
+
   right: 22px;
+  bottom: 22px;
+
   z-index: 500;
+
   display: flex;
   align-items: center;
+
   gap: 8px;
-  padding: 14px 20px;
+
+  padding: 13px 19px;
+
   border-radius: 999px;
+
   font-family: var(--font-body);
+
   font-size: 13px;
+
   font-weight: 600;
+
   animation: gentlePulse 3.2s var(--ease-in-out) infinite;
 }
 
 @keyframes gentlePulse {
   0%,
   100% {
-    box-shadow: 0 10px 28px rgba(201, 138, 62, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 0 0 rgba(201, 138, 62, 0.35);
+    box-shadow:
+      0 10px 28px rgba(201, 138, 62, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      0 0 0 0 rgba(201, 138, 62, 0.35);
   }
+
   50% {
-    box-shadow: 0 10px 28px rgba(201, 138, 62, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 0 10px rgba(201, 138, 62, 0);
+    box-shadow:
+      0 10px 28px rgba(201, 138, 62, 0.18),
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      0 0 0 10px rgba(201, 138, 62, 0);
   }
 }
 
-/* ---- DESKTOP --------------------------------------------------------- */
+/* ============================================================
+   TABLET
+   ============================================================ */
 
-@media (min-width: 860px) {
-  .ctaBar {
-    flex-direction: row;
-    align-items: center;
+@media (max-width: 900px) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
   }
 
-  .footer {
-    grid-template-columns: repeat(4, 1fr);
+  .contactPanel {
+    min-height: 560px;
+
+    padding: 48px 36px;
+  }
+
+  .mapPanel {
+    min-height: 440px;
   }
 }
 
-@media (max-width: 480px) {
-  .ctaBar,
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 640px) {
+  .contactPanel {
+    min-height: auto;
+
+    gap: 48px;
+
+    padding: 40px 20px;
+  }
+
+  .ctaHeading {
+    font-size: clamp(38px, 12vw, 48px);
+  }
+
+  .ctaDescription {
+    font-size: 13px;
+  }
+
+  .ctaBtn {
+    width: 100%;
+  }
+
+  .locationTitle {
+    font-size: 32px;
+  }
+
+  .mapPanel {
+    min-height: 340px;
+  }
+
   .footer {
-    padding: 28px 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footPoint {
+    min-height: 76px;
+
+    padding: 17px 16px;
+  }
+
+  .float {
+    right: 16px;
+    bottom: 16px;
+
+    padding: 12px 17px;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 400px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footPoint,
+  .footPoint:nth-child(2n) {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .footPoint:last-child {
+    border-bottom: 0;
   }
 }

@@ -50,9 +50,9 @@ export default async function Home() {
     <main>
       <Header />
       <Hero />
-      <Services />
-      <Gallery items={galleryItems} />
       <Craft />
+      <Services />
+      {/* <Gallery items={galleryItems} /> */}
       <Conviction />
       <Contact />
       <ScrollMotion />

@@ -108,6 +108,7 @@
   font-weight: 600;
   color: var(--text-light);
   margin-bottom: 4px;
+  margin-top:16px;
 }
 
 .captionDesc {
