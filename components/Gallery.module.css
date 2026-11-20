@@ -208,3 +208,47 @@
 .captionName { color: var(--text); }
 .captionDesc { color: var(--text-sub); }
 .lightbox { background: rgba(22, 31, 27, 0.96); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.piece {
+  min-width: 0;
+}
+
+.frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f3f0ec;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .piece {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+
+  .frame {
+    aspect-ratio: 4 / 5;
+  }
+}
