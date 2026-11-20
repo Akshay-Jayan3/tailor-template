@@ -16,7 +16,7 @@ export default function Header() {
   }
 
   return (
-    <header className={styles.header} id="home">
+    <header className={styles.header}>
       <a className={styles.brand} href="#home" onClick={() => go('#home')}>
         <Image
           src="/logo.png"

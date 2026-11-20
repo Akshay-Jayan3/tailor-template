@@ -121,3 +121,8 @@
     grid-template-columns: 1fr;
   }
 }
+
+.about { background: var(--bg-2); }
+.videoFrame, .storeFrame { border-radius: 2px; box-shadow: none; }
+.label { color: var(--maroon); }
+.point::before { color: var(--maroon); }

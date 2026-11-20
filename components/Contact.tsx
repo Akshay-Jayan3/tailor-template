@@ -4,6 +4,7 @@ import {
   site,
   whatsappLink,
 } from "@/lib/site";
+import { CalendarDays, Clock3, MapPin } from "lucide-react";
 import styles from "./Contact.module.css";
 
 export default function Contact() {
@@ -35,7 +36,6 @@ export default function Contact() {
               rel="noopener noreferrer"
             >
               <span>{contactSection.whatsappCta}</span>
-              <span aria-hidden>→</span>
             </a>
           </div>
 
@@ -48,9 +48,7 @@ export default function Contact() {
 
             <div className={styles.detailsList}>
               <div className={styles.detail}>
-                <span className={styles.detailIcon} aria-hidden>
-                  ◇
-                </span>
+                <span className={styles.detailIcon} aria-hidden><MapPin size={17} strokeWidth={1.7} /></span>
 
                 <div>
                   <span className={styles.detailLabel}>
@@ -64,9 +62,7 @@ export default function Contact() {
               </div>
 
               <div className={styles.detail}>
-                <span className={styles.detailIcon} aria-hidden>
-                  ◷
-                </span>
+                <span className={styles.detailIcon} aria-hidden><Clock3 size={17} strokeWidth={1.7} /></span>
 
                 <div>
                   <span className={styles.detailLabel}>
@@ -80,9 +76,7 @@ export default function Contact() {
               </div>
 
               <div className={styles.detail}>
-                <span className={styles.detailIcon} aria-hidden>
-                  ♡
-                </span>
+                <span className={styles.detailIcon} aria-hidden><CalendarDays size={17} strokeWidth={1.7} /></span>
 
                 <div>
                   <span className={styles.detailLabel}>
@@ -103,7 +97,6 @@ export default function Contact() {
               rel="noopener noreferrer"
             >
               <span>{contactSection.visitCta}</span>
-              <span aria-hidden>→</span>
             </a>
           </div>
         </div>
@@ -149,7 +142,7 @@ export default function Contact() {
         rel="noopener noreferrer"
         aria-label={contactSection.floatCta}
       >
-        💬 {contactSection.floatCta}
+        {contactSection.floatCta}
       </a>
     </section>
   );

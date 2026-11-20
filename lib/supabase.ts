@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 
 /* Read-only client for the public website. Uses the same Supabase
-   project as the Seww Fashions app — Portfolio Manager, Testimonial
+   project as the Sreeja Ladies Tailoring shop app — Portfolio Manager, Testimonial
    Manager, and Services Editor in the app write here; this client only
    reads rows marked visible = true (enforced by RLS, not just this
    query), so the website becomes a live mirror of what's curated in

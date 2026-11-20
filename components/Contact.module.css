@@ -528,3 +528,15 @@
     border-bottom: 0;
   }
 }
+
+.contactGrid { border-color: var(--border); background: var(--bg-2); }
+.contactPanel { background: var(--bg-2); }
+.contactPanel::before { display: none; }
+.ctaEyebrow, .locationEyebrow { color: var(--maroon); }
+.detailIcon { color: var(--maroon); }
+.detailLabel { color: var(--text-ghost); }
+.mapLink { color: var(--maroon); border-color: var(--maroon); }
+.ctaBtn { color: #fff; }
+.footer { background: #fff; border-color: var(--border); }
+.footPoint { border-color: var(--border); }
+.float { animation: none; }

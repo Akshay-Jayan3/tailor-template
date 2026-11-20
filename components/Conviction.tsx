@@ -107,7 +107,6 @@ export default async function Conviction() {
               className={styles.googleLink}
             >
               Read all reviews on Google
-              <span aria-hidden>→</span>
             </a>
           </div>
         )}

@@ -1,8 +1,8 @@
 
 
 export const site = {
-  name: "Sreejas Ladies Tailoring",
-  role: "Custom Ladies Tailoring",
+  name: "Sreeja Ladies Tailoring",
+  role: "Custom women’s tailoring",
   area: "Kochi, Kerala",
   hours: "Mon–Sat · 9:30am – 6pm",
   walkIns: "Appointments & Walk-ins Welcome",
@@ -11,7 +11,7 @@ export const site = {
   phoneDisplay: "+91 96050 76089",
 
   whatsappMessage:
-    "Hi Sreejas Ladies Tailoring! I would like to enquire about custom stitching.",
+    "Hi Sreeja Ladies Tailoring! I’d love to discuss a custom outfit and fitting.",
 
   url: "https://seww.in",
 
@@ -24,85 +24,65 @@ export const site = {
 export const nav = [
   { href: "#home", label: "Home" },
   { href: "#services", label: "Services" },
-  // { href: "#work", label: "Gallery" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ];
 
 export const hero = {
-  badge: "✨ Custom Tailoring · Made to Measure · Kochi",
+  badge: "Made to measure · Ladies tailoring · Kochi",
 
-  headlineLine1: "Made for You.",
+  headlineLine1: "Made to fit you",
 
-  headlineAccent: "Stitched ",
+  headlineAccent: "beautifully",
 
-  headlineEnd: "with Care.",
+  headlineEnd: ".",
 
   subline:
-    "Custom womenswear tailored to your measurements, style and occasion — from blouses and churidars to frocks, nightwear and alterations.",
+    "From custom blouses and churidars to occasionwear, Sreeja works with you on the design and fit before stitching begins.",
 
   imageAlt:
-    "Custom tailored womenswear by Sreejas Ladies Tailoring in Kochi",
+    "Festive Indian outfits displayed on mannequins",
 
-  primaryCta: "Book on WhatsApp →",
+  primaryCta: "Talk to Sreeja on WhatsApp",
 
   primaryCtaMessage:
-    "Hi Sreejas Ladies Tailoring! I would like to enquire about custom stitching.",
+    "Hi Sreeja, I’m interested in getting an outfit stitched. Could we talk about the style and fitting?",
 
-  secondaryCta: "View Our Work →",
+  secondaryCta: "See services",
 };
 
-export const stats = [
-  {
-    value: "20+",
-    label: "Years of Experience",
-  },
-  {
-    value: "Made to Measure",
-    label: "Personalised Fit",
-  },
-  {
-    value: "Custom",
-    label: "Your Style, Your Fabric",
-  },
-  {
-    value: "Kochi",
-    label: "Local Tailoring Studio",
-  },
-];
-
 export const servicesSection = {
-  label: "What We Make",
-  heading: "Custom Tailoring for Every Occasion",
+  label: "Services",
+  heading: "Custom stitching for women’s wear in Kochi",
   description:
-    "Bring us your idea, your fabric, or a reference. We tailor each piece around your measurements and the way you want it to feel.",
-  cta: "Explore Services →",
+    "Bring your fabric or a reference. Sreeja can help you plan the style, fit, and finishing.",
+  cta: "Explore services",
 };
 
 export const services = [
   {
     name: "Blouses",
-    desc: "Custom blouses for sarees, celebrations, everyday wear and special occasions.",
+    desc: "Blouses for sarees, celebrations, and everyday wear.",
     icon: "sparkle",
   },
   {
     name: "Churidars & Kurtis",
-    desc: "Made-to-measure churidars, kurtis and coordinated outfits with a comfortable fit.",
+    desc: "Churidars, kurtis, and coordinated outfits made to your measurements.",
     icon: "shirt",
   },
   {
     name: "Frocks",
-    desc: "Comfortable, beautifully finished frocks tailored to fit.",
+    desc: "Custom frocks, made to size.",
     icon: "kids",
   },
   {
     name: "Nightwear",
-    desc: "Comfortable nighties and everyday loungewear tailored to your fit.",
+    desc: "Nighties and comfortable everyday wear.",
     icon: "moon",
   },
   {
     name: "Alterations",
-    desc: "Precise adjustments to improve the fit of your existing clothes.",
+    desc: "Adjustments to help your existing clothes fit better.",
     icon: "ruler",
   },
 ];
@@ -111,59 +91,32 @@ export const gallerySection = {
   label: "Made Here",
   heading: "A Look at Our Work",
   description:
-    "A selection of pieces made and finished at Sreejas Ladies Tailoring.",
-  viewAllCta: "View Full Gallery →",
+    "A selection of pieces made and finished at Sreeja Ladies Tailoring.",
+  viewAllCta: "View the gallery",
 };
 
-export const portfolioPieces = [
-  {
-    n: "01",
-    name: "Saree Blouse",
-    desc: "Custom Fit & Finishing",
-    image: "work-1.png",
-  },
-  {
-    n: "02",
-    name: "Churidar",
-    desc: "Anarkali Set",
-    image: "work-2.png",
-  },
-  {
-    n: "03",
-    name: "Frock",
-    desc: "Custom Made",
-    image: "work-3.png",
-  },
-  {
-    n: "04",
-    name: "Alteration",
-    desc: "Fit & Finishing",
-    image: "work-4.png",
-  },
-] as const;
-
 export const about = {
-  label: "The Craft",
+  label: "A little about Sreeja",
 
-  heading: "Tailored to Fit. Made to Last.",
+  heading: "Fittings are personal. Your clothes should be, too.",
 
   copy:
-    "Every piece is cut and stitched with attention to fit, finish, and the details that make it feel like yours. From everyday wear to special-occasion pieces, we tailor each garment to your measurements and preferences.",
+    "Sreeja takes time to understand how you want your clothes to fit. You can talk through the design, take measurements, and make adjustments so the finished piece feels right to you.",
 
   points: [
-    "Made to your measurements",
-    "Careful fitting & finishing",
-    "Timely delivery",
-    "Personal attention",
+    "Measurements taken in person",
+    "Fitting checked with you",
+    "Bring your own fabric",
+    "Delivery date agreed in advance",
   ],
 
-  cta: "Explore Our Services →",
+  cta: "Explore our services",
 };
 
 export const howItWorks = {
   label: "The Process",
 
-  heading: "From Your Idea to the Finished Piece",
+  heading: "Here’s how it works",
 
   steps: [
     {
@@ -195,7 +148,7 @@ export const howItWorks = {
 
 export const reviewsSection = {
   label: "Loved by Our Customers",
-  heading: "Real Work. Real Reviews.",
+  heading: "Kind words from customers",
   source: "Google Reviews",
 };
 
@@ -216,8 +169,8 @@ export const testimonials = [
   },
   {
     quote:
-      "Very nice work especially their timing. I got my order on time 🤩",
-    name: "Aneesh Vijayan",
+      "Nice stitching. I have got what I expected!!! Stitched my blouse just in 2 days!!",
+    name: "Snehapriya MS",
     rating: 5,
     source: "Google",
   },
@@ -228,84 +181,44 @@ export const testimonials = [
     source: "Google",
   },
   {
-    quote: "Perfect stitching, great work",
-    name: "Sreejisha MD",
-    rating: 5,
-    source: "Google",
-  },
-  {
     quote: "Greatly satisfied with the work.",
     name: "Bindu George",
     rating: 5,
     source: "Google",
   },
-  {
-    quote: "Excellent work sreejamme 👏🏻✨",
-    name: "Nandana Prakash",
-    rating: 5,
-    source: "Google",
-  },
-  {
-    quote: "Super stitching",
-    name: "Shona Jose",
-    rating: 5,
-    source: "Google",
-  },
+
 ];
 
 export const contactSection = {
-  eyebrow: "Have Something in Mind?",
-  heading: "Let's Make Something That Fits You.",
+  eyebrow: "Have an outfit in mind?",
+  heading: "Let’s talk about the fit.",
 
   description:
-    "Send us a message on WhatsApp with what you'd like stitched. You can also share a reference image or fabric details.",
+    "Message Sreeja about what you’d like stitched. You can send a reference photo or ask about a fitting.",
 
-  whatsappCta: "Message Us on WhatsApp →",
+  whatsappCta: "Talk to Sreeja on WhatsApp",
 
   visitCta: "Visit the Studio",
 
-  floatCta: "Book Now",
+  floatCta: "Chat with Sreeja",
 };
-
-export const trustPoints = [
-  {
-    icon: "fit",
-    label: "Made to Measure",
-    sub: "Fitted to you",
-  },
-  {
-    icon: "quality",
-    label: "Your Fabric Welcome",
-    sub: "Bring your own",
-  },
-  {
-    icon: "heart",
-    label: "Careful Finishing",
-    sub: "Every detail matters",
-  },
-  {
-    icon: "time",
-    label: "Clear Communication",
-    sub: "Stay connected on WhatsApp",
-  },
-];
 
 export const footerPoints = [
   {
-    label: "Easy Communication",
-    sub: "On WhatsApp",
+    label: "Sreeja Ladies Tailoring",
+    sub: "Custom women’s tailoring",
   },
   {
-    label: "Personal Attention",
-    sub: "For every fitting",
-  },
-  {
-    label: "Custom Made",
-    sub: "Around your measurements",
-  },
-  {
-    label: "Local Studio",
+    label: "Studio",
     sub: "Kochi, Kerala",
+  },
+  {
+    label: "Opening hours",
+    sub: "Monday to Saturday · 9:30am–6pm",
+  },
+  {
+    label: "Appointments & walk-ins",
+    sub: "Message ahead to discuss your fitting",
   },
 ];
 

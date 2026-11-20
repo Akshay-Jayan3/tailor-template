@@ -5,8 +5,6 @@ import Gallery, { type GalleryPiece } from '@/components/Gallery'
 import Craft from '@/components/Craft'
 import Conviction from '@/components/Conviction'
 import Contact from '@/components/Contact'
-import ScrollMotion from '@/components/ScrollMotion'
-import { portfolioPieces as fallbackPieces } from '@/lib/site'
 import { supabase } from '@/lib/supabase'
 
 // Portfolio/Services/Testimonials are editable live from the app —
@@ -22,9 +20,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 }
 
 async function getGalleryItems(): Promise<GalleryPiece[]> {
-  if (!supabase) {
-    return fallbackPieces.map((p) => ({ name: p.name, desc: p.desc, src: `/images/works/${p.image}` }))
-  }
+  if (!supabase) return []
 
   const { data, error } = await supabase
     .from('portfolio_items')
@@ -33,7 +29,7 @@ async function getGalleryItems(): Promise<GalleryPiece[]> {
     .order('display_order')
 
   if (error || !data || data.length === 0) {
-    return fallbackPieces.map((p) => ({ name: p.name, desc: p.desc, src: `/images/works/${p.image}` }))
+    return []
   }
 
   return data.map((item) => ({
@@ -50,12 +46,11 @@ export default async function Home() {
     <main>
       <Header />
       <Hero />
-      <Craft />
       <Services />
-      {/* <Gallery items={galleryItems} /> */}
+      {galleryItems.length > 0 && <Gallery items={galleryItems} />}
       <Conviction />
+      <Craft />
       <Contact />
-      <ScrollMotion />
     </main>
   )
 }

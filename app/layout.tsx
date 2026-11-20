@@ -34,10 +34,10 @@ const dmMono = DM_Mono({
 });
 
 const title =
-  "Sreejas Ladies Tailoring | Custom Tailoring in Kochi";
+  "Sreeja Ladies Tailoring | Custom Tailoring in Kochi";
 
 const description =
-  "Sreejas Ladies Tailoring offers custom ladies tailoring in Kochi, Kerala. Made-to-measure blouses, churidars, kurtis, frocks, nightwear and alterations, tailored with care to your measurements and style.";
+  "Sreeja Ladies Tailoring offers custom ladies tailoring in Kochi, Kerala. Made-to-measure blouses, churidars, kurtis, frocks, nightwear and alterations, tailored with care to your measurements and style.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   description,
 
   keywords: [
-    "Sreejas Ladies Tailoring",
+    "Sreeja Ladies Tailoring",
     "ladies tailoring Kochi",
     "women tailoring Kochi",
     "tailoring shop Kochi",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
         url: "/images/hero.png",
         width: 1717,
         height: 916,
-        alt: "Sreejas Ladies Tailoring — Custom Tailoring in Kochi",
+        alt: "Sreeja Ladies Tailoring — Custom Tailoring in Kochi",
       },
     ],
 
